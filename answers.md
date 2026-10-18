@@ -102,3 +102,43 @@ What is the difference between a merge commit and a fast-forward merge?
 merge commit: creates a new commit to combine changes from two branches.
 fast forward: merge moves the main branch forward if there are no separate new commits on it.
 
+
+Part 5:
+
+1. Scenario A.
+Ahmed creates a branch and changes line 10 of index.html. Sara creates a different branch and changes line 1 of the same index.html. Both merge into main. Will there be a conflict? Why or why not?
+-Different lines of the same file hence no conflict, git merges automatically
+
+
+2. Scenario B. 
+Ali edits style.css on his branch. Fatima edits app.js on her branch. Both merge into main. Will there be a conflict? Why or why not?
+-Different file hence no conflict
+
+
+3. Scenario C. 
+DevA changes line 5 of config.py to DEBUG = True. Dev B changes line 5 of config.py to DEBUG = False . Both merge into main . Will there be a conflict? If yes, show exactly what the conflict markers would look like in the file.
+-Same lines, different values so there will be a conflict. 
+  <<<<<<< HEAD
+  DEBUG = True
+  =======
+  DEBUG = False
+  >>>>>>> 
+
+4. Scenario D. 
+You run git merge feature/new-ui and see this output:
+
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Write out the exact steps (commands included) you would take to resolve this conflict and finish the merge.
+- run git status to see which files conflicted
+- open index.html and choose and combine the content
+- delete all markers
+- run git add index.html
+- run git commit -m "fix: resolved conflict in index.html"
+- git merge --abort cancels the merge if required
+
+5. Scenario E.
+Your teammate says: "I always do git pull before I start working every morning." Is this a good practice? Explain why or why not, and what could go wrong if they skip it.
+-it's a good practice. we should always start from latest code. if we don't, we will starting changing the older version of th ecode hence the possibility of gettings conflicts later increase. 
