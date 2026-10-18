@@ -72,3 +72,7 @@ git fetch: to check for updates from github before pushing
 
 
 2.4
+Did this merge create a merge commit or was it a fast-forward? How can you tell?
+fast-forward, because main didnt change while we were on the branch. also git merge feature/profile-page output says fast forward. 
+
+
