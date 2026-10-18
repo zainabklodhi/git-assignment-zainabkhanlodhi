@@ -59,6 +59,16 @@ node_modules/
 *.env
 
 
+2.2
 Why did we commit A+B separately from C? When would you want to split commits this way?
 so that we can keep changes organized and make it easier to track each feature. we can do this when working on diff features so it is easier to review and undo the changes made if we want. 
 
+
+2.3
+What would happen if you made a local commit first WITHOUT pulling? What command helps you check?
+local changes might conflict with the changes on github. 
+git status: to check my current status
+git fetch: to check for updates from github before pushing
+
+
+2.4
