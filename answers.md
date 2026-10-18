@@ -75,4 +75,17 @@ git fetch: to check for updates from github before pushing
 Did this merge create a merge commit or was it a fast-forward? How can you tell?
 fast-forward, because main didnt change while we were on the branch. also git merge feature/profile-page output says fast forward. 
 
+3.2
+Why did this conflict happen? (Reference the rule: same file, same line)
+because both branches changed the same line of same file. if this happens, git cant choose one on its own so it gives conflict error.
+
+
+Would there have been a conflict if the two branches edited different lines of team.txt?
+no conflict if diff lines edited.
+
+
+Would there have been a conflict if one branch edited team.txt and the other edited about.md?
+no conflict if diff files edited.
+
+
 
