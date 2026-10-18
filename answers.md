@@ -85,7 +85,20 @@ no conflict if diff lines edited.
 
 
 Would there have been a conflict if one branch edited team.txt and the other edited about.md?
-no conflict if diff files edited.
+no conflict if diff files 
 
 
+4.1
+What is the purpose of a pull request? Why not just merge directly?
+pull request lets team lead review your changes before merging them into the main branch. it is done so that errors or bugs are caught and corrected instead of merging directly without checking them.
+
+
+Name two things a reviewer should check in a pull request.
+whether the code works and when tested, gives the correct output.
+no secrets or debugs in code.
+
+
+What is the difference between a merge commit and a fast-forward merge?
+merge commit: creates a new commit to combine changes from two branches.
+fast forward: merge moves the main branch forward if there are no separate new commits on it.
 
